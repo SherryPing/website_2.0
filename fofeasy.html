@@ -9,37 +9,10 @@
     	<script src="js/index.js"></script>
 		<title>fofeasy</title>
 	</head>
-	<body>
+	<body class="fofeasy">
 		<!--头部-->
-		<header class="z-header">
-			<nav class="z-header_content">
-				<div class="ico-box"><a class="ico"></a></div>
-				<ul class="menu">
-					<li class="item">
-						<a href="index.html" class="nuxt-link-exact-active nuxt-link-active">首页</a>
-					</li>
-					<li class="item">
-						<span>核心数据</span>
-						<ul>
-							<li>中国私募证券投资基金数据库</li>
-							<li>中国公募基金数据库</li>
-						</ul>
-					</li>
-					<li class="item">
-						<span>系统工具</span>
-						<ul>
-							<li><a href="fofeasy.html">FOF Easy可视化Web终端</a></li>
-							<li><a href="fofpower.html">FOF Power基金管理系统</a></li>
-						</ul>
-					</li>
-					<li class="item">
-						<a href="#">配套服务</a>
-					</li>
-					<li class="item">
-						<a href="#">关于我们</a>
-					</li>
-			</nav>
-		</header>
+		<!--导航栏-->
+		<div class="header-top"></div>
 		<!--头部背景-->
 		<div class="masthead top-bg-easy">
 			<!--<img src="img/top-bg.png" width="100%"/>-->
@@ -96,7 +69,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="maincon easy-con3" style="height: 895px;">
+		<div class="maincon easy-con3" style="height: 570px;">
 			<div class="title">
 				海量基金数据
 			</div>
@@ -105,14 +78,14 @@
 					<div class="pub1">
 						<div class="img"><img src="img/easy-con3-pic1.png"/></div>
 						<div class="title">公募基金数量</div>
-						<div class="num">7980</div>
+						<div class="num" id="num1">7980</div>
 						<div class="date">
 							<div>数据截至日期：2018-04-01</div>
 						</div>
 					</div>
-					<div class="card2 pub" style="display:none;margin-right: 10px;">
-						<div class="img"><img src="img/easy-con4-pic1.png"/><span>公募基金数量</span></div>
-						<div class="con">
+					<div class="card2 pub" style="margin-right: 10px;">
+						<div class="img"><img src="img/easy-con3-pic2.png" style="width: 40px;height: 40px;margin-top: -5px;"/><span>公募基金数量</span></div>
+						<div class="con" style="margin-top: 30px;">
 							<div>股票型基金：1087</div>
 							<div>债券型基金：2353</div>
 							<div>混合型基金：3258</div>
@@ -121,30 +94,165 @@
 						</div>
 					</div>
 				</div>
-				<div class="card pri">
-					<div class="img"><img src="img/easy-con3-pic1.png"/></div>
-					<div class="title">私募基金数量</div>
-					<div class="num">175168</div>
-					<div class="date">
-						<div>数据截至日期：2018-04-01</div>
+				<div class="card">
+					<div class="pub1">
+						<div class="img"><img src="img/easy-con3-pic1.png"/></div>
+						<div class="title">私募基金数量</div>
+						<div class="num" id="num2">175168</div>
+						<div class="date">
+							<div>数据截至日期：2018-04-01</div>
+						</div>
+					</div>
+					<div class="card2 pri">
+						<div class="img"><img src="img/easy-con3-pic2.png" style="width: 40px;height: 40px;margin-top: -5px;"/><span>私募基金数量</span></div>
+						<div class="con">
+							<div>股票策略：65710</div>
+							<div>债券策略：12056</div>
+							<div>管理期货：6627</div>
+							<div>宏观策略：731</div>
+							<div>相对价值：1017</div>
+							<div>组合策略：3014</div>
+							<div>事件驱动：6297</div>
+							<div>多策略：6745</div>
+							<div>其他一级策略：17185</div>
+						</div>
 					</div>
 				</div>
 				
-				<div class="card2 pri">
-					<div class="img"><img src="img/easy-con4-pic1.png"/><span>私募基金数量</span></div>
-					<div class="con">
-						<div>股票策略：65710</div>
-						<div>债券策略：12056</div>
-						<div>管理期货：6627</div>
-						<div>宏观策略：731</div>
-						<div>相对价值：1017</div>
-						<div>组合策略：3014</div>
-						<div>事件驱动：6297</div>
-						<div>多策略：6745</div>
-						<div>其他一级策略：17185</div>
+				
+			</div>
+		</div>
+		<!--主体4-->
+		<div class="maincon easy-con4" style="height: 845px;">
+			<div class="card-con">
+				<div>
+					<div class="card">
+					<div class="top-bg">
+						<div class="title">FOF Easy V2.0</div>
+						<div class="img"><img src="img/easy-con4-pic1.png" /><span>基础版</span></div>
 					</div>
+					<div class="main">
+						<div class="radio-con">
+							<div>
+								<img src="img/easy-con4-radio.png" />
+								产品透视
+							</div>
+							<div>
+								<img src="img/easy-con4-radio.png" />
+								投顾挖掘
+							</div>
+							<div>
+								<img src="img/easy-con4-radio.png" />
+								自定义数据
+							</div>
+							<div>
+								<img src="img/easy-con4-radio.png"/>
+								一键导出报告
+							</div>
+						</div>
+						<div class="tip">
+							云端用户名+密码访问
+						</div>
+						<div class="bottom-btn">
+							申请试用
+						</div>
+					</div>
+				</div>
+				</div>
+				<div>
+					<div class="card">
+					<div class="top-bg">
+						<div class="title">FOF Easy V2.0</div>
+						<div class="img"><img src="img/easy-con4-pic2.png" /><span>升级版</span></div>
+					</div>
+					<div class="main">
+						<div class="radio-con">
+							<div>
+								<img src="img/easy-con4-radio.png"/>
+								产品透视
+							</div>
+							<div>
+								<img src="img/easy-con4-radio.png"/>
+								投顾挖掘
+							</div>
+							<div>
+								<img src="img/easy-con4-radio.png"/>
+								行业数据
+							</div>
+							<div>
+								<img src="img/easy-con4-radio.png"/>
+								数据上传
+							</div>
+							<div>
+								<img src="img/easy-con4-radio.png"/>
+								组合配置
+							</div>
+							<div>
+								<img src="img/easy-con4-radio.png"/>
+								自定义数据
+							</div>
+							<div>
+								<img src="img/easy-con4-radio.png"/>
+								一键导出报告
+							</div>
+							<div>
+								<img src="img/easy-con4-radio.png"/>
+								产品形式
+							</div>
+						</div>
+						<div class="tip">
+							云端用户名+密码访问
+						</div>
+						<div class="bottom-btn">
+							<div>申请试用</div>
+						</div>
+					</div>
+				</div>
+				</div>
+				<div>
+					<div class="card">
+					<div class="top-bg">
+						<div class="title">FOF Easy V2.0</div>
+						<div class="img"><img src="img/easy-con4-pic3.png"/><span>组合版</span></div>
+					</div>
+					<div class="main">
+						<div class="radio-con">
+							<div>
+								<img src="img/easy-con4-radio.png"/>
+								产品透视
+							</div>
+							<div>
+								<img src="img/easy-con4-radio.png"/>
+								投顾挖掘
+							</div>
+							<div>
+								<img src="img/easy-con4-radio.png"/>
+								行业数据
+							</div>
+							<div>
+								<img src="img/easy-con4-radio.png"/>
+								数据上传
+							</div>
+							<div>
+								<img src="img/easy-con4-radio.png"/>
+								自定义数据
+							</div>
+							<div>
+								<img src="img/easy-con4-radio.png"/>
+								一键导出报告
+							</div>
+						</div>
+						<div class="tip">
+							云端用户名+密码访问
+						</div>
+						<div class="bottom-btn">
+							<div>申请试用</div>
+						</div>
+					</div>
+				</div>
 				</div>
 			</div>
 		</div>
+		<div class="footer-bottom"></div>
 	</body>
 </html>

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="css/bootstrap/dist/css/bootstrap.min.css" />
+    	<link rel="stylesheet" href="css/index.css">  	
+    	<script src="js/jquery.min.js"></script>
+    	<script src="js/index.js"></script>
+		<title>中国私募证券投资基金数据库</title>
+	</head>
+	<body class="mutual">
+		<!--导航栏-->
+		<div class="header-top"></div>
+		<!--头部背景-->
+		<div class="masthead top-bg-hedge">
+			<div class="bg-content2">
+				<div class="title">中国私募证券投资基金数据库</div>
+				<div class="con">中国私募证券投资基金数据库（CHFDB）包含基金产品信息库、投顾公司信息库与投资经理信息库。目前CHFDB最早的私募数据可追溯到2003年，覆盖了通过私募公司发行的产品、信托平台发行的私募产品、券商集合理财产品、公募基金一对多专户理财产品、期货资管发行的产品及单账户证券等基金产品信息。</div>
+				<div class="s-btn" style="margin: 20px auto;">申请试用<img src="img/next.png" /></div>
+			</div>
+		</div>
+		<!--主体1-->
+		<div class="maincon mutual-con1">
+			<div class="title">
+				<hr/>
+				<span>截止2018-04-19，CMFDB目前共计收录了173604只私募基金产品，3466家私募基金公司，6025位基金经理信息。</span>
+				<hr/>
+			</div>
+			<div class="pic-con">
+				<div>
+					<div class="card">
+						<img src="img/mutual-con1-pic1.png" class="mutual-con1-pic1"/>
+						<img src="img/mutual-con1-pic2.png" class="mutual-con1-pic2 Rotation"/>
+						<div class="con" style="left: 185px;">
+							<div class="num" id="num4">17364</div>
+							<div class="name">私募产品</div>
+						</div>
+					</div>					
+				</div>
+				<div>
+					<div class="card">
+						<img src="img/mutual-con1-pic1.png" class="mutual-con1-pic1"/>
+						<img src="img/mutual-con1-pic2.png" class="mutual-con1-pic2 Rotation"/>
+						<div class="con" style="left: 185px;">
+							<div class="num" id="num5">34066</div>
+							<div class="name">私募机构</div>
+						</div>
+					</div>					
+				</div>
+				<div>
+					<div class="card">
+						<img src="img/mutual-con1-pic1.png" class="mutual-con1-pic1"/>
+						<img src="img/mutual-con1-pic2.png" class="mutual-con1-pic2 Rotation"/>
+						<div class="con">
+							<div class="num" id="num6">6025</div>
+							<div class="name">基金经理</div>
+						</div>
+					</div>					
+				</div>
+			</div>
+		</div>
+		<!--主体2-->
+		<div class="maincon mutual-con2">
+			<div class="title">数据库结构</div>
+			<div class="card-con">
+				<img src="img/mutual-con2-pic1.png" style="margin-top: 30px;" />
+				<div class="pic-center-text">数据库表结构关系图</div>
+			</div>
+			<div class="subTitle">私募基金数据共总计58张表</div>
+			<div class="tab-con">
+				<div>
+					<div class="data-table data-table2" style="height: 598px;">
+						<div class="title">基本信息类数据</div>
+						<div class="con">
+							<div>
+								<div class="name">fund_info（基本信息表）</div>
+								<div class="intro">包括基金名称、成立时间、申购状态等基本信息。</div>
+							</div>
+							<div>
+								<div class="name">org_info（机构信息表）</div>
+								<div class="intro">包括机构名称、机构类型、成立日期、地址等基本信息。</div>
+							</div>
+							<div>
+								<div class="name">person_info（人员信息表）</div>
+								<div class="intro">包括姓名、性别、学历等人员基本信息。</div>
+							</div>
+							<div>
+								<div class="name">manager_info（经理人信息表）</div>
+								<div class="intro">包含姓名、性别、学历、在管基金、投资年限等基金经理基本信息。</div>
+							</div>
+							<div>
+								<div class="name">executive_info（高管信息表）</div>
+								<div class="intro">包含姓名、性别、学历、所在机构等高管基本信息。</div>
+							</div>							
+						</div>
+					</div>
+					<div class="data-table m-top50 data-table2" style="height: 503px;">
+						<div class="title">指数类数据</div>
+						<div class="con">
+							<div>
+								<div class="name">market_index（市场行情指数表）</div>
+								<div class="intro">包含沪深300、中债指数、上证50等市场指数信息。</div>
+							</div>
+							<div>
+								<div class="name">fund_week_index（私募周频指数表）</div>
+								<div class="intro">私募云通所编制的13个策略指数的周频指数</div>
+							</div>
+							<div>
+								<div class="name">fund_month_index（私募月频指数表）</div>
+								<div class="intro">私募云通所编制的13个策略指数的月频指数。</div>
+							</div>
+							<div>
+								<div class="name">org_weekly_index（机构周频指数表）</div>
+								<div class="intro">包含机构周频综合指数、分策略指数等信息。</div>
+							</div>
+							<div>
+								<div class="name">org_monthly_index（机构月频指数表）</div>
+								<div class="intro">包含机构月频综合指数、分策略指数等信息。</div>
+							</div>							
+						</div>
+					</div>
+					<div class="data-table m-top50" >
+						<div class="title">衍生指标(行情指数)</div>
+						<div class="con">
+							<div>
+								<div class="name">index_daily_return（指数日频收益指标表）</div>
+								<div class="intro">包含指数日频的收益类指标信息。</div>
+							</div>
+							<div>
+								<div class="name">index_daily_risk（指数日频风险指标表）</div>
+								<div class="intro">包含指数日频风险类指标信息。</div>
+							</div>
+							<div>
+								<div class="name">index_daily_subsidiary（指数日频其他指标表）</div>
+								<div class="intro">包含指数日频的其他指标信息，如连续上涨周数、连续下跌周数。</div>
+							</div>
+							<div>
+								<div class="name">index_weekly_return（指数周频收益指标表）</div>
+								<div class="intro">包含指数周频的收益类指标信息。</div>
+							</div>
+							<div>
+								<div class="name">index_weekly_risk（指数周频风险指标表）</div>
+								<div class="intro">包含指数月频风险类指标信息。</div>
+							</div>	
+							<div>
+								<div class="name">index_weekly_subsidiary（指数周频其他指标表）</div>
+								<div class="intro">包含指数周频的其他指标信息，如连续上涨周数、连续下跌周数。</div>
+							</div>	
+							<div>
+								<div class="name">index_monthly_return（指数月频收益指标表）</div>
+								<div class="intro">包含指数月频的收益类指标信息。</div>
+							</div>								
+							<div>
+								<div class="name">index_monthly_risk（指数月频风险指标表）</div>
+								<div class="intro">包含指数月频风险类指标信息。</div>
+							</div>	
+							<div>
+								<div class="name">index_monthly_subsidiary（指数月频其他指标表）</div>
+								<div class="intro">包含指数月频的其他指标信息，如连续上涨周数、连续下跌周数。</div>
+							</div>	
+						</div>
+					</div>
+					
+				</div>
+				<div>
+					<div class="data-table">
+						<div class="title">延伸数据</div>
+						<div class="con">
+							<div>
+								<div class="name">fund_info_subsidiary（基金附属信息表）</div>
+								<div class="intro">包含基金预警线、止损线、发行规模等基金附属信息。</div>
+							</div>
+							<div>
+								<div class="name">fund_fee_data（基金费率表）</div>
+								<div class="intro">包含基金最低认购金额、最低追加金额、费用类型、费率等基金费用类信息。</div>
+							</div>
+							<div>
+								<div class="name">fund_portfolio（母子基金关系表）</div>
+								<div class="intro">包含分级型、组合型等基金的母子基金关系信息。</div>
+							</div>
+							<div>
+								<div class="name">fund_security_data（基金股票持仓表）</div>
+								<div class="intro">包含部分资产管理计划的具体持股标的、规模、比例等信息。</div>
+							</div>
+							<div>
+								<div class="name">org_integrity（机构诚信信息表）</div>
+								<div class="intro">包括机构异常信息。</div>
+							</div>
+							<div>
+								<div class="name">person_description（人员简历表）</div>
+								<div class="intro">包含人名、简历等信息。</div>
+							</div>
+							<div>
+								<div class="name">market_info（市场概况表）</div>
+								<div class="intro">包含私募基金数量、规模等行业数据。</div>
+							</div>							
+						</div>
+					</div>
+					<div class="data-table m-top50">
+						<div class="title">衍生指标（基金）</div>
+						<div class="con">
+							<div>
+								<div class="name">fund_week_return（基金周频收益指标表）</div>
+								<div class="intro">包含基金周度的收益类指标信息。</div>
+							</div>
+							<div>
+								<div class="name">fund_week_risk（基金周频风险指标表）</div>
+								<div class="intro">包含基金周频的风险类指标信息。</div>
+							</div>
+							<div>
+								<div class="name">fund_subsidiary_weekly_index(基金周频其他指标表)</div>
+								<div class="intro">包含基金周频的其他指标，如上行捕获率、痛苦比率等。</div>
+							</div>
+							<div>
+								<div class="name">fund_month_return（基金月频收益指标表）</div>
+								<div class="intro">包含基金月度的收益类指标信息。</div>
+							</div>
+							<div>
+								<div class="name">fund_month_risk（基金月频风险指标表）</div>
+								<div class="intro">包含基金月频的风险类指标信息。</div>
+							</div>	
+							<div>
+								<div class="name">fund_subsidiary_month_index(基金月频其他指标表)</div>
+								<div class="intro">包含基金月频的其他指标，如上行捕获率、痛苦比率等。</div>
+							</div>	
+						</div>
+					</div>
+					<div class="data-table m-top50 data-table2" style="height: 734px;">
+						<div class="title">规模, 时序类数据</div>
+						<div class="con">
+							<div>
+								<div class="name">fund_asset_scale（基金规模时序表）</div>
+								<div class="intro">包含基金时间序列上的规模信息。</div>
+							</div>
+							<div>
+								<div class="name">org_asset_scale（机构规模时序表）</div>
+								<div class="intro">机构时间序列上的规模信息。</div>
+							</div>
+							<div>
+								<div class="name">org_timeseries（机构其他数据时序表）</div>
+								<div class="intro">包含机构员工数量、实缴资本、注册资本等信息。</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div>
+					<div class="data-table data-table2" style="height: 598px;">
+						<div class="title">基金净值&分类</div>
+						<div class="con">
+							<div>
+								<div class="name">fund_nv_data_source（多源净值表）</div>
+								<div class="intro">包括从不同信源获取的净值数据。</div>
+							</div>
+							<div>
+								<div class="name">fund_nv_data_standard（标准净值表）</div>
+								<div class="intro">经私募云通校验及优选的净值数据。</div>
+							</div>
+							<div>
+								<div class="name">fund_nv_standard_m（月频化净值表）</div>
+								<div class="intro">经过私募云通校验、优选且对齐到月末的月频净值数据。</div>
+							</div>
+							<div>
+								<div class="name">fund_nv_standard_w（周频化净值表）</div>
+								<div class="intro">经过私募云通校验、优选且对齐到每周五的周频净值数据。</div>
+							</div>
+							<div>
+								<div class="name">fund_allocation_data（基金分红拆分表）</div>
+								<div class="intro">包含基金税后红利、拆分比例等基金分红信息。</div>
+							</div>
+						</div>
+					</div>
+					<div class="data-table m-top50 " >
+						<div class="title">基金关系表</div>
+						<div class="con">
+							<div>
+								<div class="name">fund_manager_mapping（基金与经理人关系表）</div>
+								<div class="intro">包含基金与历任管理基金的基金经理信息。</div>
+							</div>
+							<div>
+								<div class="name">fund_org_mapping（基金与机构关联）</div>
+								<div class="intro">包含基金与管理机构、托管机构、顾问管理机构的关系信息。</div>
+							</div>
+							<div>
+								<div class="name">org_person_mapping（人员与机构关联）</div>
+								<div class="intro">包含人员与机构任职信息，如职位、职责等等。</div>
+							</div>							
+						</div>
+					</div>
+					<div class="data-table m-top50 data-table2" style="height: 180px;">
+						<div class="title">分类数据</div>
+						<div class="con">
+							<div>
+								<div class="name">fund_type_mapping（基金分类表）</div>
+								<div class="intro">包含基金按策略、按运行状态、是否结构化等不同维度的分类信息。</div>
+							</div>
+						</div>
+					</div>
+					<div class="data-table m-top50 data-table2" style="height: 734px;">
+						<div class="title">衍生指标（机构）</div>
+						<div class="con">
+							<div>
+								<div class="name">org_monthly_research（机构投研能力指标表）</div>
+								<div class="intro">包含机构月度投研能力指标，如择时能力、选股能力等。</div>
+							</div>
+							<div>
+								<div class="name">org_monthly_return（机构收益指标表）</div>
+								<div class="intro">包含机构月度收益类指标信息。</div>
+							</div>
+							<div>
+								<div class="name">org_monthly_risk（机构风险指标表）</div>
+								<div class="intro">包含机构月度风险类指标信息。</div>
+							</div>							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="footer-bottom"></div>
+	</body>
+</html>

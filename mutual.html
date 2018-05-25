@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="css/bootstrap/dist/css/bootstrap.min.css" />
+    	<link rel="stylesheet" href="css/index.css">  	
+    	<script src="js/jquery.min.js"></script>
+    	<script src="js/index.js"></script>
+		<title>中国公募基金数据库</title>
+	</head>
+	<body class="mutual">
+		<!--导航栏-->
+		<div class="header-top"></div>
+		<!--头部背景-->
+		<div class="masthead top-bg-mutual">
+			<div class="bg-content2">
+				<div class="title">中国公募基金数据库</div>
+				<div class="con">中国公募基金数据库（CMFDB）是私募云通完全自主研发、自主构建的数据库，包括基金产品信息库、机构信息库与投资经理信息库。最早的产品数据可追溯到1998年，详细收录了基金基本信息、分类、基金净值与分红，基金投资组合信息，基金财务报表，机构信息及投资经理信息。</div>
+				<div class="s-btn" style="margin: 20px auto;">申请试用<img src="img/next.png" /></div>
+			</div>
+		</div>
+		<!--主体1-->
+		<div class="maincon mutual-con1">
+			<div class="title">
+				<hr/>
+				<span>截止2018-04-19，CMFDB目前共计收录了7892只公募基金产品，133家公募基金公司，3025位基金经理信息。</span>
+				<hr/>
+			</div>
+			<div class="pic-con">
+				<div>
+					<div class="card">
+						<img src="img/mutual-con1-pic1.png" class="mutual-con1-pic1"/>
+						<img src="img/mutual-con1-pic2.png" class="mutual-con1-pic2 Rotation"/>
+						<div class="con">
+							<div class="num" id="num1">7892</div>
+							<div class="name">公募产品</div>
+						</div>
+					</div>					
+				</div>
+				<div>
+					<div class="card">
+						<img src="img/mutual-con1-pic1.png" class="mutual-con1-pic1"/>
+						<img src="img/mutual-con1-pic2.png" class="mutual-con1-pic2 Rotation"/>
+						<div class="con" style="left: 185px;">
+							<div class="num" id="num2">133</div>
+							<div class="name">公募基金公司</div>
+						</div>
+					</div>					
+				</div>
+				<div>
+					<div class="card">
+						<img src="img/mutual-con1-pic1.png" class="mutual-con1-pic1"/>
+						<img src="img/mutual-con1-pic2.png" class="mutual-con1-pic2 Rotation"/>
+						<div class="con">
+							<div class="num" id="num3">3025</div>
+							<div class="name">基金经理</div>
+						</div>
+					</div>					
+				</div>
+			</div>
+		</div>
+		<!--主体2-->
+		<div class="maincon mutual-con2">
+			<div class="title">数据库结构</div>
+			<div class="card-con">
+				<img src="img/mutual-con2-pic1.png" style="margin-top: 30px;" />
+				<div class="pic-center-text">数据库表结构关系图</div>
+			</div>
+			<div class="subTitle">公募基金数据共总计50张表</div>
+			<div class="tab-con">
+				<div>
+					<div class="data-table">
+						<div class="title">基本信息类数据</div>
+						<div class="con">
+							<div>
+								<div class="name">fund_info（基本信息表）</div>
+								<div class="intro">包括基金名称、成立时间、申购状态等基本信息。</div>
+							</div>
+							<div>
+								<div class="name">person_info（基金人员信息表）</div>
+								<div class="intro">包括姓名、投资年限、履历等人员基本信息。</div>
+							</div>
+							<div>
+								<div class="name">org_info（机构信息表）</div>
+								<div class="intro">包括机构名称、机构类型、成立日期、地址等基本信息。</div>
+							</div>
+						</div>
+					</div>
+					<div class="data-table m-top50 ">
+						<div class="title">关系表</div>
+						<div class="con">
+							<div>
+								<div class="name">fund_manager_mapping（基金与基金经理关联）</div>
+								<div class="intro">包含基金与历任管理基金的基金经理信息。</div>
+							</div>
+							<div>
+								<div class="name">org_person_mapping（基金人员与机构关联）</div>
+								<div class="intro">包含人员与机构任职信息，如职位、职责等等。</div>
+							</div>
+							<div>
+								<div class="name">fund_org_mapping（基金与机构关联）</div>
+								<div class="intro">包含基金与管理机构、托管机构、顾问管理机构的关系信息。</div>
+							</div>
+						</div>
+					</div>
+					<div class="data-table m-top50 data-table2">
+						<div class="title">基金分类</div>
+						<div class="con" style="height: 795px;">
+							<div>
+								<div class="name">fund_type_mapping（基金产品分类明细）</div>
+								<div class="intro">包含基金按投资标的、投资方式等多维的基金分类信息。</div>
+							</div>
+							<div>
+								<div class="name">fund_type_mapping_source(基金产品分类明细多源表)</div>
+								<div class="intro">包含从不同信源上获得的基金按不同方式分类的分类信息。</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div>
+					<div class="data-table">
+						<div class="title">延伸信息数据</div>
+						<div class="con">
+							<div>
+								<div class="name">fund_description（基金描述信息表）</div>
+								<div class="intro">包含基金投资目标、投资范围等信息。</div>
+							</div>
+							<div>
+								<div class="name">fund_fee（基金费率表）</div>
+								<div class="intro">包含基金申购费、认购费等费率信息。</div>
+							</div>
+							<div>
+								<div class="name">fund_info_structured（母子基金关联表）</div>
+								<div class="intro">包含分母子基金结构信息、亏损临界点、保收益临界点等信息。</div>
+							</div>
+							<div>
+								<div class="name">fund_announcement（基金公告表）</div>
+								<div class="intro">包含基金公告日期、公告类型、公告内容等信息。</div>
+							</div>
+							<div>
+								<div class="name">fund_asset_scale（基金资产规模表）</div>
+								<div class="intro">包含基金总份额、总资产等信息。</div>
+							</div>
+							<div>
+								<div class="name">fund_portfolio_asset（基金资产配置表）</div>
+								<div class="intro">包含基金一级、二级资产类别的配置信息与金额。</div>
+							</div>
+							<div>
+								<div class="name">fund_portfolio_industry（基金行业配置表）</div>
+								<div class="intro">包含基金配置的行业、资产类别、类别金额等信息。</div>
+							</div>
+							<div>
+								<div class="name">fund_position_stock（基金持股明细表）</div>
+								<div class="intro">包含基金持有的股票、持仓数量、金额、占净资产比例、占流通市值比例等信息。</div>
+							</div>
+							<div>
+								<div class="name">fund_position_bond（基金持债明细表）</div>
+								<div class="intro">包含基金持有标的、持仓数量、金额、占净资产比例等信息。</div>
+							</div>
+							<div>
+								<div class="name">fund_holder（基金持有人结构表）</div>
+								<div class="intro">包含持有者类型、持有比例、持有份额等信息。</div>
+							</div>
+							<div>
+								<div class="name">fund_balance（基金资产负债表）</div>
+								<div class="intro">包含基金银行存款、结算准备金、股票投资、债券投资等资产负债信息。</div>
+							</div>
+							<div>
+								<div class="name">fund_income（基金利润分配表）</div>
+								<div class="intro">包含基金收入合计、利息收入、股票投资收益、债券投资收益等利润信息。</div>
+							</div>
+							<div>
+								<div class="name">org_asset_scale（机构资产规模表）</div>
+								<div class="intro">包含基金公司总净资产规模、旗下基金数量等信息。</div>
+							</div>
+							<div>
+								<div class="name">org_portfolio_asset（机构资产配置表）</div>
+								<div class="intro">包含机构资产类别以及类别资产金额信息。</div>
+							</div>
+							<div>
+								<div class="name">org_portfolio_industry（机构行业配置表）</div>
+								<div class="intro">包含机构配置行业类别、类别金额、占净比等信息。</div>
+							</div>
+							<div>
+								<div class="name">org_position_stock（机构持股明细表）</div>
+								<div class="intro">包含机构持有标的、标的金额、持仓数量等持股信息。</div>
+							</div>
+							<div>
+								<div class="name">org_holder（机构持有人结构表）</div>
+								<div class="intro">包含持有者类型、持有比例、持有份额、总持有规模等信息。</div>
+							</div>
+							<div>
+								<div class="name">org_shareholder（机构股本股东表）</div>
+								<div class="intro">包含股东名称、总数、股本数量、持股数量、持有比例等信息。</div>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+				<div>
+					<div class="data-table">
+						<div class="title">基金净值</div>
+						<div class="con">
+							<div>
+								<div class="name">fund_nv（基金净值数据表标准）</div>
+								<div class="intro">包含经私募云通优选过的基金净值数据。</div>
+							</div>
+							<div>
+								<div class="name">fund_nv_source（基金净值数据表多源）</div>
+								<div class="intro">包含多种信源获取的基金净值数据。</div>
+							</div>
+							<div>
+								<div class="name">fund_yield（基金万份收益表）</div>
+								<div class="intro">包含基金万份收益及七日年化收益信息。</div>
+							</div>
+							<div>
+								<div class="name">fund_dividend_split（基金分红拆分表）</div>
+								<div class="intro">包含基金权益登记日、红利发放日、税后红利等信息。</div>
+							</div>
+							<div>
+								<div class="name">fund_split（基金拆分表）</div>
+								<div class="intro">包含基金拆分日期、拆分比例信息。</div>
+							</div>
+							<div>
+								<div class="name">fund_divident（基金分红表）</div>
+								<div class="intro">包含基金分红日期、分红比例信息。</div>
+							</div>
+						</div>
+					</div>
+					<div class="data-table m-top50 data-table2">
+						<div class="title">公募业绩指标</div>
+						<div class="con" style="height: 885px;">
+							<div>
+								<div class="name">fund_daily_return（基金日度收益指标表）</div>
+								<div class="intro">包含基金日度的收益类指标信息。</div>
+							</div>
+							<div>
+								<div class="name">fund_daily_risk（基金日度风险指标表）</div>
+								<div class="intro">包含基金日度风险类指标信息。</div>
+							</div>
+							<div>
+								<div class="name">fund_daily_subsidiary（基金日度附属指标表）</div>
+								<div class="intro">包含基金日度的附属指标表，比如择时、跟踪误差、连续上涨日数等。</div>
+							</div>
+							<div>
+								<div class="name">fund_weekly_return（基金周度收益指标表）</div>
+								<div class="intro">包含基金周度的收益类指标信息。</div>
+							</div>
+							<div>
+								<div class="name">fund_weekly_risk（基金周度风险指标表）</div>
+								<div class="intro">包含基金周度风险类指标信息。</div>
+							</div>
+							<div>
+								<div class="name">fund_weekly_subsidiary（基金周度附属指标表）</div>
+								<div class="intro">包含基金周度的附属指标表，比如择时、跟踪误差、连续上涨日数等。</div>
+							</div>
+							<div>
+								<div class="name">fund_monthly_return（基金月度收益指标表）</div>
+								<div class="intro">包含基金月度的收益类指标信息。</div>
+							</div>							
+							<div>
+								<div class="name">fund_monthly_risk（基金月度风险指标表）</div>
+								<div class="intro">包含基金月度的风险类指标信息。</div>
+							</div>
+							<div>
+								<div class="name">fund_monthly_subsidiary（基金月度附属指标表）</div>
+								<div class="intro">包含基金月度的附属指标表，比如择时、跟踪误差、连续上涨日数等。</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer-bottom"></div>
+		
+	</body>
+</html>
