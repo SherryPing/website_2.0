@@ -69,7 +69,7 @@ body div {
 
 .wePrcdiv .weprcContent div {
     display: inline-block;
-    width: 87%;
+    width: 89%;
     color: #484848;
     opacity: 0.8;
 }
@@ -490,7 +490,8 @@ article,aside,blockquote,body,button,code,dd,div,dl,dt,fieldset,figcaption,figur
 .z-header_content .menu>li{
 	position: relative;
 	float:left;
-	padding:0 20px
+	padding:0 20px;
+	cursor: pointer;
 }
 .z-header_content .menu>li>a,.z-header_content li span{
 	-webkit-box-sizing:border-box;
@@ -508,7 +509,6 @@ article,aside,blockquote,body,button,code,dd,div,dl,dt,fieldset,figcaption,figur
 .z-header_content .menu>li:hover,.z-header_content li:hover{
 	background:#4499D0;
 }
-
 .z-header .z-header_content .menu>li:hover a,.z-header .z-header_content li:hover span{
 	color: #fff !important;
 }
@@ -519,6 +519,11 @@ article,aside,blockquote,body,button,code,dd,div,dl,dt,fieldset,figcaption,figur
 .masthead {
 	position: relative;	
 	height: 485px;
+}
+.masthead2 {
+	position: relative;	
+	height: 921px;
+	top: 75px;
 }
 .top-bg-power {
 	background: url(../img/top-bg-power.png) top center no-repeat;
@@ -572,6 +577,9 @@ article,aside,blockquote,body,button,code,dd,div,dl,dt,fieldset,figcaption,figur
 }
 .top-bg-exponential {
 	background: url(../img/top-bg-exponential.png) top center no-repeat;
+}
+.top-bg-jcc {
+	background: url(../img/top-bg-jcc.png) top center no-repeat;
 }
 
 .top-bg-easy .img {
@@ -642,7 +650,7 @@ article,aside,blockquote,body,button,code,dd,div,dl,dt,fieldset,figcaption,figur
 }
 .s-btn img {
 	position: relative;
-    top: -1px;
+    top: -3px;
     left: 10px;
 	width: 35px;
 	height: 35px;	
@@ -1249,7 +1257,7 @@ article,aside,blockquote,body,button,code,dd,div,dl,dt,fieldset,figcaption,figur
 }
 .mutual-con1 .title hr{
 	display: inline-block;
-    width: 105px;
+    width: 90px;
     border-bottom: 1px solid #484848;
     margin: 15px 10px 15px 0px;
 }
@@ -1377,7 +1385,7 @@ to {-webkit-transform: rotate(360deg);transform-origin:50% 50%;  }
     margin: 20px 10px 15px 0px;
 }
 .about .about-con1 {
-	background: url(../img/about-con1-bg.png) center center no-repeat;
+	background: url(../img/about-con1-bg.jpg) center center no-repeat;
 	height: 547px;
 	padding-top: 50px;
 }
@@ -1573,6 +1581,10 @@ to {-webkit-transform: rotate(360deg);transform-origin:50% 50%;  }
 .about .about-con3 .news .right-con .bottom-date img {
 	margin-right: 5px;
 }
+.about .about-con3 .news .right-con .bottom-date a{
+	color: #4499D0 ;
+}
+
 .about .about-con3 .news nav {
 	float: right;
 }
@@ -1753,9 +1765,12 @@ to {-webkit-transform: rotate(360deg);transform-origin:50% 50%;  }
 	width: calc(100% - 482px) ;
 	font-size: 24px;
 	color: #3D5668;
-	letter-spacing: 1.8px;
 	line-height: 28px;
 	text-align: center;		
+}
+.exponential-con1 .con .left-p .title {
+	letter-spacing: 1.8px;
+    margin-bottom: 25px;
 }
 .exponential-con1 .con .right-p,.exponential-con2 .card-con .right-p {
 	padding: 20px;
@@ -1851,6 +1866,9 @@ to {-webkit-transform: rotate(360deg);transform-origin:50% 50%;  }
 	color: rgba(72,72,72,0.8);
 	margin-top: 12px;
 }
+.exponential-con2 .detail .right-con .bottom-date a{
+	color: #4499D0 ;
+}
 .exponential-con3 {
 	background: url(../img/exponential-con3-pic1.png) center center no-repeat;
 	margin-top: 80px;
@@ -1868,6 +1886,7 @@ to {-webkit-transform: rotate(360deg);transform-origin:50% 50%;  }
 	color: #FFF;
 	border-radius: 6px;
 	border: 1px solid #fff;
+	cursor: pointer;
 }
 .exponential-con4 .con .right-p .detail {
 	padding: 10px;
@@ -1893,4 +1912,95 @@ to {-webkit-transform: rotate(360deg);transform-origin:50% 50%;  }
 	letter-spacing: 3.58px;
 	text-align: center;
 	line-height: 34px;
+}
+/*基查查*/
+.jcc-middle-bg {
+	margin-top: 75px;
+	height: 430px;
+	background: url(../img/jcc-middle-bg.png) center center no-repeat;
+	text-align: center;
+}
+.jcc-middle-bg .maincon {
+	padding: 75px calc((100% - 1240px)/2);
+	color: #fff;
+}
+.jcc-middle-bg .maincon .con-title {
+	font-size: 38px;
+	height: 75px;
+	line-height: 50px;
+    letter-spacing: 2px;
+}
+.jcc-middle-bg .maincon .con {
+	font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 1px;
+}
+.jcc-bottom-con {
+	background: #fff;
+	padding: 60px 0 120px 0;
+}
+.jcc-bottom-con>div {
+	display: inline-block;
+	vertical-align: top;
+	font-size: 20px;
+	color: #484848;
+}
+.jcc-bottom-con .con-left,.jcc-bottom-con .con-right {
+	width: calc((100% - 565px)/2);
+}
+.jcc-bottom-con .con-center {
+	width: 550px;
+	text-align: center;
+	margin-top: -240px;
+}
+.jcc-bottom-con .con-left>div,.jcc-bottom-con .con-right>div {
+	margin: 95px 0;
+}
+.jcc-bottom-con .con-left>div .info,.jcc-bottom-con .con-right>div .info {
+	display: inline-block;
+	width: calc(100% - 80px);
+	height: 74px;
+	line-height: 74px;
+}
+.jcc-bottom-con .con-left>div .info {
+	text-align: right;
+} 
+.jcc-bottom-con .con-right>div {
+	text-align: left;
+}
+//指数模态框
+.join-modal .title-logo {
+	margin: 20px 35px;
+	padding-bottom: 15px;
+	border-bottom: 2px dashed #D0D0D0;
+}
+.join-modal .info {
+	padding:0 20px;
+	margin-top: 20px;
+	line-height: 18px;
+	font-size: 13px;
+	color: #484848;
+}
+.join-modal .info>div {
+	margin-bottom: 5px;
+}
+.fr {
+	float:right;
+}
+.tr {
+	text-align: right;
+}
+.indent50 {
+	text-indent:25px;
+}
+.easy2Btn {
+	height: 30px;
+	width: 110px;
+	border: 1px solid #e3e8ec;
+	background-color: #EACF50;
+	color: white;
+	border-radius: 3px;
+}
+.easy2Btn:hover{
+	background-color: #e4c11b;
 }

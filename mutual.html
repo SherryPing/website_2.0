@@ -16,7 +16,7 @@
 		<div class="masthead top-bg-mutual">
 			<div class="bg-content2">
 				<div class="title">中国公募基金数据库</div>
-				<div class="con">中国公募基金数据库（CMFDB）是私募云通完全自主研发、自主构建的数据库，包括基金产品信息库、机构信息库与投资经理信息库。最早的产品数据可追溯到1998年，详细收录了基金基本信息、分类、基金净值与分红，基金投资组合信息，基金财务报表，机构信息及投资经理信息。</div>
+				<div class="con">中国公募基金数据库（CMFDB）是私募云通完全自主研发、自主构建的数据库，包括基金产品信息库、机构信息库与投资经理信息库。最早的产品数据可追溯到1998年，详细收录了基金基本信息、分类、基金净值与分红、基金投资组合信息、基金财务报表、机构信息及投资经理信息。</div>
 				<div class="s-btn" style="margin: 20px auto;">申请试用<img src="img/next.png" /></div>
 			</div>
 		</div>
@@ -24,7 +24,7 @@
 		<div class="maincon mutual-con1">
 			<div class="title">
 				<hr/>
-				<span>截止2018-04-19，CMFDB目前共计收录了7892只公募基金产品，133家公募基金公司，3025位基金经理信息。</span>
+				<span>截止2018-04-19，CMFDB目前共计收录了<span id="num1-1">--</span>只公募基金产品，<span id="num2-1">--</span>家公募基金公司，<span id="num3-1">--</span>位基金经理信息。</span>
 				<hr/>
 			</div>
 			<div class="pic-con">
@@ -33,7 +33,7 @@
 						<img src="img/mutual-con1-pic1.png" class="mutual-con1-pic1"/>
 						<img src="img/mutual-con1-pic2.png" class="mutual-con1-pic2 Rotation"/>
 						<div class="con">
-							<div class="num" id="num1">7892</div>
+							<div class="num" id="num1">0000</div>
 							<div class="name">公募产品</div>
 						</div>
 					</div>					
@@ -43,7 +43,7 @@
 						<img src="img/mutual-con1-pic1.png" class="mutual-con1-pic1"/>
 						<img src="img/mutual-con1-pic2.png" class="mutual-con1-pic2 Rotation"/>
 						<div class="con" style="left: 185px;">
-							<div class="num" id="num2">133</div>
+							<div class="num" id="num2">000</div>
 							<div class="name">公募基金公司</div>
 						</div>
 					</div>					
@@ -53,7 +53,7 @@
 						<img src="img/mutual-con1-pic1.png" class="mutual-con1-pic1"/>
 						<img src="img/mutual-con1-pic2.png" class="mutual-con1-pic2 Rotation"/>
 						<div class="con">
-							<div class="num" id="num3">3025</div>
+							<div class="num" id="num3">0000</div>
 							<div class="name">基金经理</div>
 						</div>
 					</div>					
@@ -75,15 +75,15 @@
 						<div class="con">
 							<div>
 								<div class="name">fund_info（基本信息表）</div>
-								<div class="intro">包括基金名称、成立时间、申购状态等基本信息。</div>
+								<div class="intro">包含基金名称、成立时间、申购状态等基本信息。</div>
 							</div>
 							<div>
 								<div class="name">person_info（基金人员信息表）</div>
-								<div class="intro">包括姓名、投资年限、履历等人员基本信息。</div>
+								<div class="intro">包含姓名、投资年限、履历等人员基本信息。</div>
 							</div>
 							<div>
 								<div class="name">org_info（机构信息表）</div>
-								<div class="intro">包括机构名称、机构类型、成立日期、地址等基本信息。</div>
+								<div class="intro">包含机构名称、机构类型、成立日期、地址等基本信息。</div>
 							</div>
 						</div>
 					</div>
@@ -148,7 +148,7 @@
 							</div>
 							<div>
 								<div class="name">fund_portfolio_industry（基金行业配置表）</div>
-								<div class="intro">包含基金配置的行业、资产类别、类别金额等信息。</div>
+								<div class="intro">包含基金配置的行业、资产类别、行业占比等信息。</div>
 							</div>
 							<div>
 								<div class="name">fund_position_stock（基金持股明细表）</div>
@@ -156,11 +156,11 @@
 							</div>
 							<div>
 								<div class="name">fund_position_bond（基金持债明细表）</div>
-								<div class="intro">包含基金持有标的、持仓数量、金额、占净资产比例等信息。</div>
+								<div class="intro">包含基金持有债券、持仓数量、金额、占净资产比例等信息。</div>
 							</div>
 							<div>
 								<div class="name">fund_holder（基金持有人结构表）</div>
-								<div class="intro">包含持有者类型、持有比例、持有份额等信息。</div>
+								<div class="intro">包含持有者类型、持有份额、持有比例等信息。</div>
 							</div>
 							<div>
 								<div class="name">fund_balance（基金资产负债表）</div>
@@ -184,7 +184,7 @@
 							</div>
 							<div>
 								<div class="name">org_position_stock（机构持股明细表）</div>
-								<div class="intro">包含机构持有标的、标的金额、持仓数量等持股信息。</div>
+								<div class="intro">包含机构持有股票、持仓数量、金额、占净资产比例等信息。</div>
 							</div>
 							<div>
 								<div class="name">org_holder（机构持有人结构表）</div>

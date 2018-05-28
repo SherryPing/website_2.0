@@ -242,8 +242,9 @@
 		
 	</body>
 	<script type="text/javascript" charset="utf-8">
+    	
     	var windowHeight = window.screen.availHeight;
-//  	document.getElementById('content').style.height = (windowHeight - 64)+"px";
+    	document.getElementById('content').style.height = (windowHeight - 64)+"px";
       	mui.init();
       	document.getElementById('submit').addEventListener('tap', function() {
       		if(personInfo.userName.value.length==0){
@@ -261,8 +262,7 @@
 					   	 type=radioForm.type[i].value; //这里得到单选按钮值
 					   }
 					}
-				console.log(type);
-				$.post("https://wx.fofpower.com/weixin/success/",
+				$.post("https://wx.fofpower.com/weixin/trial_product/",
       				{'name':personInfo.userName.value,
       				  'mobile':personInfo.userPhone.value,
       				  'company':personInfo.userCompany.value,
@@ -283,10 +283,20 @@
                         if(resp.success) {
 
                         }
-                    }
+                   },function(){
+                   		mui.alert('您的申请已受理，稍后会有工作人员联系您！', '提交成功', '确定',
+      						callback=function(){
+      							setTimeout(function(){
+      								if (typeof(WeixinJSBridge) != 'undefined')
+      									WeixinJSBridge.call('closeWindow');
+      							},100);
+      						})
+                   }
       			);
+      			mui.alert('您的申请已受理，稍后会有工作人员联系您！', '提交成功', '确定')
       		}
 
       	})
+    
     </script>
 </html>
