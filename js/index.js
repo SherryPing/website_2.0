@@ -1,4 +1,9 @@
 $(function(){
+//	导航栏点击
+//	$(".header-top").on("click",'.lic',function(){
+//		console.log("888")
+//		$(this).addClass("active")
+//	})
    	 //	各页面导入导航栏和底部
 	$(".header-top").load("./header.html",function(){
 		$('.menu>li').hover(function(e) {
@@ -147,57 +152,74 @@ $(function(){
 	}
 	var url = location.search; //获取url中"?"符后的字串   
 	var name = geturlParams(url).name;
-	console.log(name)
 	// 头部菜单滚动
-	var mutualNum=0;
-	var mutualOrgNum=0;
-	var mutualManageNum=0;
-	var hedgeNum=0;	
-	var hedgeOrgNum=0;	
-	var hedgeManageNum=0;	
-	function pData(chose){
-		var params = {
-        	'chose':chose
-        }
+	var mutualNum=8037;
+	var mutualOrgNum=133;
+	var mutualManageNum=3024;
+	var hedgeNum=176083;	
+	var hedgeOrgNum=34046;	
+	var hedgeManageNum=5567;	
+	function pData(time){
+//		var params = {
+//      	'chose':chose
+//      }
 		$.ajax({
             url: "https://wxapi.fofeasy.com/base/fund/home/fund_about_count",
+//			url: "http://192.168.11.135:8000/base/fund/home/fund_about_count",
             type: 'get',
             contentType: "application/json;charset=utf-8",
-            data: params,
+            data: {},
             success: function (resp) {
                 if(resp.success){
-                	if(chose=="hedge"){
-                		hedgeNum=resp.records.fund
-                		hedgeOrgNum=resp.records.org
-                		hedgeManageNum=resp.records.person
-                		if(name=="hedge"){
-                			$(".mutual #num4-1").text(hedgeNum);
-                			$(".mutual #num5-1").text(hedgeOrgNum);
-                			$(".mutual #num6-1").text(hedgeManageNum);
-	                		$(".mutual #num4").numberAnimate({num:hedgeNum, speed:1000});
-						    $(".mutual #num5").numberAnimate({num:hedgeOrgNum, speed:1000});
-						    $(".mutual #num6").numberAnimate({num:hedgeManageNum, speed:1000});
-					    }
-                	}else{
-                		mutualNum=resp.records.fund
-                		mutualOrgNum=resp.records.org
-                		mutualManageNum=resp.records.person
-                		if(name=="mutual"){
-                			$(".mutual #num1-1").text(mutualNum);
-                			$(".mutual #num2-1").text(mutualOrgNum);
-                			$(".mutual #num3-1").text(mutualManageNum);
-	                		$(".mutual #num1").numberAnimate({num:mutualNum, speed:1000});
-						    $(".mutual #num2").numberAnimate({num:mutualOrgNum, speed:1000});
-						    $(".mutual #num3").numberAnimate({num:mutualManageNum, speed:1000});
-					    }
+                	var hedgeAll=resp.records.hedge;
+                	var mutualAll=resp.records.mutual;
+                	var staticdate=resp.records.hedge.date;
+                	hedgeNum=hedgeAll.fund;
+            		hedgeOrgNum=hedgeAll.org;
+            		hedgeManageNum=hedgeAll.person;
+            		mutualNum=mutualAll.fund;
+            		mutualOrgNum=mutualAll.org;
+            		mutualManageNum=mutualAll.person;           		           		
+                	if(name=="hedge"){       
+                		$(".mutual #static-hedge-date").text(staticdate);
+            			$(".mutual #num4-1").text(hedgeNum);
+            			$(".mutual #num5-1").text(hedgeOrgNum);
+            			$(".mutual #num6-1").text(hedgeManageNum);
+                		$(".mutual #num4").numberAnimate({num:hedgeNum, speed:1000});
+					    $(".mutual #num5").numberAnimate({num:hedgeOrgNum, speed:1000});
+					    $(".mutual #num6").numberAnimate({num:hedgeManageNum, speed:1000});					    
+                	}else if(name=="mutual"){
+                		$(".mutual #static-mutual-date").text(staticdate);
+            			$(".mutual #num1-1").text(mutualNum);
+            			$(".mutual #num2-1").text(mutualOrgNum);
+            			$(".mutual #num3-1").text(mutualManageNum);
+                		$(".mutual #num1").numberAnimate({num:mutualNum, speed:1000});
+					    $(".mutual #num2").numberAnimate({num:mutualOrgNum, speed:1000});
+					    $(".mutual #num3").numberAnimate({num:mutualManageNum, speed:1000});
+                	}else if(name=="fofeasy"){
+                		if(time==1){
+                			$(".fofeasy #num1").numberAnimate({num:mutualNum, speed:1000});
+	    					$(".fofeasy #num2").numberAnimate({num:hedgeNum, speed:1000});
+                		}
+            			$(".fofeasy .static-fofeasy-date").text(staticdate);
+            			var hedgeDiv="";
+            			var mutualDiv="";
+            			for(var i=0;i<hedgeAll.fund_type.length;i++){
+            				hedgeDiv += "<div>"+hedgeAll.fund_type[i].type_name+":"+hedgeAll.fund_type[i].num+"</div>";
+            			}
+            			for(var i=0;i<mutualAll.fund_type.length;i++){
+            				mutualDiv += "<div>"+mutualAll.fund_type[i].type_name+":"+mutualAll.fund_type[i].num+"</div>";
+            			}
+            			$(".fofeasy #mutual-con").html(mutualDiv);
+	    				$(".fofeasy #hedge-con").html(hedgeDiv);
+               		
                 	}
                 }
             }
         });
 	}
 	if(name=="fofeasy"||name=="mutual"||name=="hedge"){
-		pData('hedge');
-		pData('mutual');
+		pData();
 	}
 	
    	var time=1; //fofpower页面数字滚动只滚动一次
@@ -210,17 +232,31 @@ $(function(){
 	    	$(".z-header_content .menu>li>span").css("color","#333");
 	    	$(".z-header").addClass("bg-blue");
 	    }else{
-	    	$(".z-header").css("background","transparent");
+	    	if($(".header-top").hasClass("darkRed")){
+	    		$(".z-header").css("background","#bc222b");
+	    	}else{
+	    		$(".z-header").css("background","transparent");
+	    	}
+	    	
 	    	$(".z-header_content .menu>li>a").css("color","#fff");
 	    	$(".z-header_content .menu>li>span").css("color","#fff");
 	    	$(".z-header").removeClass("bg-blue").addClass("bg-white");
 	    	$(".z-header").addClass("bg-white");
 	    }
 	 	//fofeasy海量基金数据滚动效果
-	    if(name=="fofeasy"&&sTop>=900&&time==1){	    	
-			$(".fofeasy #num1").numberAnimate({num:mutualNum, speed:1000});
-		    $(".fofeasy #num2").numberAnimate({num:hedgeNum, speed:1000});
-		    time++;
+		
+	    if(name=="fofeasy"&&sTop>=900&&time==1){
+	    	setTimeout(function(){
+	    		console.log(mutualNum,hedgeNum)
+	    		if(mutualNum==0){
+	    			pData(1);
+	    		}else{
+	    			$(".fofeasy #num1").numberAnimate({num:mutualNum, speed:1000});
+	    			$(".fofeasy #num2").numberAnimate({num:hedgeNum, speed:1000});
+	    		}
+	    		
+	    	},2000)	    	
+	    	time++;		    
 	    }
 	     
 	    //首页动态效果
@@ -319,6 +355,38 @@ $(function(){
 //	跳转申请试用页面
 	$(".s-btn").click(function(){
 		window.location.href="applyFor.html";
+	})
+	//pernum:每页展示的子div的数量;pageNum:第几页
+	function page(perNum,pageNum){
+		var start=(pageNum-1)*perNum;
+		var end=start+perNum;
+		console.log(start,end)
+		$(".pagination-div>div").css("display","none")
+		$(".pagination-div>div").slice(start,end).css("display","block")
+	}
+//	指数分页
+	$(".exponential .pagination li").click(function(){
+			
+		var pageNum=$(this).data("id");
+		if(pageNum=="prev"){
+			var tempNum=$(".exponential .pagination li.active").data("id")-1;
+			if(tempNum>0){
+				pageNum=tempNum;
+			}else{
+				pageNum=1;
+			}
+		}else if(pageNum=="next"){
+			var tempNum2=Number($(".exponential .pagination li.active").data("id"))+1;
+			var amount=$(this).prev().data("id")
+			if(tempNum2<amount){
+				pageNum=tempNum2;
+			}else{
+				pageNum=amount;			
+			}
+		}
+		$(".exponential .pagination li").removeClass("active");	
+		$(".exponential .pagination li[data-id="+pageNum+"]").addClass("active");
+		page(3,pageNum)
 	})
 	
    

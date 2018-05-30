@@ -279,6 +279,13 @@ body div {
     opacity: 0.7;
     height: 380px;
 }*/
+.loading {
+	position: relative;
+	font-size: 16px;
+	text-align: center;
+	color: rgba(72,72,72,0.8);
+	top: 140px;
+}
 
 .leftCnt {
     margin: 0 0;
@@ -1096,7 +1103,7 @@ article,aside,blockquote,body,button,code,dd,div,dl,dt,fieldset,figcaption,figur
 	border: 1px dashed #009bd6;
 	margin-bottom: 20px;
 }
-.easy-con4 .card-con .card .main .bottom-btn {
+.easy-con4 .card-con .card .main .bottom-btn,.smyt-btn1 {
 	border-radius: 8px;
 	width: 100%;
 	height: 45px;
@@ -1104,6 +1111,9 @@ article,aside,blockquote,body,button,code,dd,div,dl,dt,fieldset,figcaption,figur
 	font-size: 20px;
 	color: #fff;
 	background: #398db6;
+}
+.smyt-btn1 {
+	background: #009ad6;
 }
 .index .middle-bg {
 	width: 100%;
@@ -1130,6 +1140,7 @@ article,aside,blockquote,body,button,code,dd,div,dl,dt,fieldset,figcaption,figur
 	color: #fff;
 	vertical-align: top;
 	text-align: center;
+	overflow: hidden;
 }
 .index .index-middle-bg .card .icon{
 	padding-top: 100px;
@@ -1257,7 +1268,7 @@ article,aside,blockquote,body,button,code,dd,div,dl,dt,fieldset,figcaption,figur
 }
 .mutual-con1 .title hr{
 	display: inline-block;
-    width: 90px;
+    width: 80px;
     border-bottom: 1px solid #484848;
     margin: 15px 10px 15px 0px;
 }
@@ -1268,6 +1279,8 @@ article,aside,blockquote,body,button,code,dd,div,dl,dt,fieldset,figcaption,figur
 }
 .mutual-con1 .pic-con>div {
 	flex: 1;
+}
+.mutual-con1 .pic-con .card {
 	position: relative;
 }
 .mutual-con1 .pic-con .card .mutual-con1-pic1 {
@@ -1276,12 +1289,12 @@ article,aside,blockquote,body,button,code,dd,div,dl,dt,fieldset,figcaption,figur
 .mutual-con1 .pic-con .card .mutual-con1-pic2{
 	position: absolute;
 	top: 69px;
-	left: 125px;
+	left: 54px;
 }
 .mutual-con1 .pic-con .card .con{
 	position: absolute;
 	top: 145px;
-	left: 202px;	
+	left: 130px;	
 	color: #fff;
 	font-size: 18px;
 }
@@ -2003,4 +2016,10 @@ to {-webkit-transform: rotate(360deg);transform-origin:50% 50%;  }
 }
 .easy2Btn:hover{
 	background-color: #e4c11b;
+}
+.lic.active {
+	color:#82d7e7!important;
+}
+.pagination {
+	cursor: pointer;
 }

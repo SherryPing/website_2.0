@@ -5,9 +5,11 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="css/bootstrap/dist/css/bootstrap.min.css" />
 		<link href="css/mui.min.css" rel="stylesheet"/>
+		<!--<link href="css/layer.css" rel="stylesheet"/>-->
     	<link rel="stylesheet" href="css/index.css"> 
     	<script src="js/mui.min.js"></script>
     	<script src="js/jquery.min.js"></script>
+    	<script src="js/layer.js"></script>
     	<script src="js/index.js"></script>
 		<title>申请试用</title>
 		<style>
@@ -100,7 +102,7 @@
 			    border-radius: 100%
 			}
 			.radio input[type=radio]:checked+i {
-			    background: #4678e8;
+			    background: #009ad6;
 			    border: 0
 			}
 			.radio input[type=radio]:checked+i:after {
@@ -233,7 +235,7 @@
 		           	</form>﻿
 					</div>
 				</div>
-				<button type="button" id="submit" class="btn">提交</button>
+				<button type="button" id="submit" class="smyt-btn1">提交</button>
 			</div>
 			<div class="submitDiv">
 			</div>
@@ -243,10 +245,11 @@
 	</body>
 	<script type="text/javascript" charset="utf-8">
     	
-    	var windowHeight = window.screen.availHeight;
-    	document.getElementById('content').style.height = (windowHeight - 64)+"px";
-      	mui.init();
+//  	var windowHeight = window.screen.availHeight;
+//  	document.getElementById('content').style.height = (windowHeight - 64)+"px";
+//    	mui.init();
       	document.getElementById('submit').addEventListener('tap', function() {
+      		
       		if(personInfo.userName.value.length==0){
       			mui.toast("请输入姓名");
       		}else if (!(/^1[34578]\d{9}$/.test(personInfo.userPhone.value))){
@@ -269,6 +272,7 @@
       				  'trial_product': parseInt(type)
       				},
       				function(resp) {
+      					console.log("提交")
       					mui.alert('您的申请已受理，稍后会有工作人员联系您！', '提交成功', '确定',
       						callback=function(){
       							setTimeout(function(){
@@ -276,24 +280,17 @@
       									WeixinJSBridge.call('closeWindow');
       							},100);
       						})
-
-      					<!--mui.toast("您的申请已受理，稍后会有工作人员联系您！", {duration:'5000ms', type:'div'});-->
-
-
                         if(resp.success) {
 
                         }
-                   },function(){
-                   		mui.alert('您的申请已受理，稍后会有工作人员联系您！', '提交成功', '确定',
-      						callback=function(){
-      							setTimeout(function(){
-      								if (typeof(WeixinJSBridge) != 'undefined')
-      									WeixinJSBridge.call('closeWindow');
-      							},100);
-      						})
                    }
       			);
-      			mui.alert('您的申请已受理，稍后会有工作人员联系您！', '提交成功', '确定')
+				layer.confirm('您的申请已受理，稍后会有工作人员联系您！', {
+					btn: ['确定'] //可以无限个按钮					  
+					 },function(index){
+					 	layer.close(index);
+					 }
+				);
       		}
 
       	})

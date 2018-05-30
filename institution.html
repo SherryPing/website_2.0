@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/bootstrap/dist/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="css/index.css">  	
+	<script src="js/jquery.min.js"></script>
+	<script src="js/index.js"></script>
+	<title>云通致善资产管理研究院</title>
+	<style type="text/css"">
+	/*html,body{width:100%;height:100%;margin:0;padding:0;overflow-x:hidden;}*/ 
+	.header1 {background:url('img/cademo_title_background.png') center center no-repeat;z-index:-1; margin-top: 75px;}
+	.img-group{width:auto;display:flex;}
+	.img-group>div:first-child{
+		flex:1;
+	    background-image: url("img/yq.png");
+	    background-size: cover;
+	    background-repeat: no-repeat;
+	} 
+	.yjsm{
+	    background-image: url("img/yjsm.png");
+	    background-size: cover;
+	    background-repeat: no-repeat;
+	} 
+	.img-group > div {flex:1;margin:0px;padding:0px;}
+	.title-label{font-family: PingFangSC-Regular;font-size: 30px;color: #484848;letter-spacing: 3px;text-align: justify;}
+	.text-center{align-text:center;} .text-left{align-text:left;} .text-right{align-text:right;}
+	.bg-red{background-color:#D61F2C } .text-main{font-family:'Helvetica';font-size: 18px;color: #FFFFFF;text-align: justify;line-height: 28px;padding:20px;} .text-main > div{display: table-cell;vertical-align: middle;} .white{color:#ffffff;}
+	.i-text{width:25px;height:18px;background-image:url(img/text-icon-white.png);float:left;margin-top:5px;margin-right:5px;vertical-align:text-top;vertical-align:middle;} p {opacity: 0.8;font-family: PingFangSC-Regular;font-size: 20px;color: #FFFFFF;line-height: 24px;margin-top:6px}
+	 h1 {color:#FFFFFF ;font-family: 'Helvetica-Bold';font-size:30px;letter-spacing:1.8px;line-height:36px;margin-top:25px;}
+	.img-list {z-index:999;border-radius:4px;} .img-list:hover{box-shadow: 0 0 3px #000}
+	.team-info-group{position:relative}
+	.team-member{border-bottom: 1px solid #e5e5e9;margin:0 auto;min-height:260px;margin-top:50px;} .team-member>div{display:inline-block;vertical-align:top;}.member-img{width:180px;height:240px;} .member-info{width: calc(100% - 188px);}.clearfix {min-height: 1px;}  .member-info > ul{line-height:30px;}
+	.member-info span{font-size: 14px;color: #484848;text-align: justify;line-height: 22px;}
+	.member-info > ul > li{margin: 5px 0 5px 25px;letter-spacing: 1px;}
+	.member-info > ul > li.grey{opacity: 0.8;font-family: Helvetica;font-size: 16px;color: #484848;text-align: justify;line-height: 16px;margin:0 25px;}
+	.member-info > ul > li.grey span{height:25px;line-height: 25px;letter-spacing: 1px;}
+	.member-info .member-name{font-family: MicrosoftYaHei-Bold;font-size: 24px;color: #484848;height: 30px;letter-spacing: 1px;} 
+	.popular_package_row {border-bottom: 1px dashed #ccc;margin-bottom: 10px;padding-bottom: 10px;}
+	.text-group{margin-top:0;} .text-group > span {font-size:18px;line-height:28px;margin: 10px 100px 10px 40px;}
+	.member-info > ul > li > span {white-space : normal;overflow-y:hidden;width:100%;}
+	.title{margin-bottom:60px;}
+	.footer{background-image:url('img/db.png')}
+	.hr1 {
+	    border-top: 2px solid #fff;
+	    opacity:0.52;
+	    width: 1240px;
+	}
+	.register{color:white;width:180px;height:50px;border-radius:5px;margin-bottom:20px;border:1px solid white;font-size:20px}
+	.register:hover{background-color:#ffffff;color:black;border:1px solid #e5e5e9;}
+	.info-group{width:100%;margin:0} .info-group > div{margin-top:30px;}
+	.z-header {
+		background-color: #bc222b;
+	}
+	.z-header_content .menu ul li {
+		min-width: 205px;
+	    height: 35px;
+	    background-color: #bc222b;
+	    line-height: 35px;
+	    text-align: left;
+	    padding-left: 20px;
+	    cursor: pointer;
+	    color: #fff;
+	    margin-left: 0;
+	}
+	.z-header_content .menu>li:hover,.z-header_content li:hover{
+		background:#bc222b;
+	}
+	.service {
+		display: flex;
+	}
+	.service>div {
+		flex:1;
+		text-align:center;
+	}
+	.service .img-list {
+		z-index: 999;
+	    border-radius: 4px;
+	    width: 328px;
+	    margin: 0 auto;
+	}
+	.Copyright {
+	    color: #fff;
+	    opacity:0.52;
+	}
+</style>
+</head>
+<body>
+	<!--导航栏-->
+		<div class="header-top darkRed"></div>
+		<!--头部背景-->
+		<div class="masthead header1">
+		</div>
+		<!--主体-->
+		<div class="maincon">
+			<div class="title">
+				背景起源（Background）
+			</div>
+		</div>
+			<div class="img-group">
+				<div style="height:480px">
+					<!--<img src="img/yq.png" alt="">-->
+				</div>
+				<div class="bg-red text-main" style="height:480px;display: table;">
+					<div>
+						<div class="text-group">
+							<span>
+							<i class="i-text"></i>2016年，南北两个城市，上海、北京。两个陌生团队——私募云通、致善金融书院。几乎同时开始创业。一个致力用数据让金融更可信，一个希望用研究让金融更美好。
+							</span>
+						</div>
+						<div class="text-group">
+							<span>
+							<i class="i-text"></i>
+								两年，从相识到相知，我们从对方看到了自己，从自己发现了对方，彼此惺惺相惜！
+							</span>
+						</div>
+						<div class="text-group">
+							<span>
+							<i class="i-text"></i>
+								我们相信，市场是最好的老师，实践才是检验真理的唯一标准。学以致用，行以博学。
+							</span>
+						</div>
+						<div class="text-group">
+							<span>
+							<i class="i-text"></i>
+								我们相信，勇于担当，敢于行动才是社会进步的根本力量。任重致远，止于至善！
+							</span>
+						</div>
+						<div class="text-group">
+							<span>
+							<i class="i-text"></i>
+								2018年，我们携手前行，共同打造一家金融研究智库，云通致善资产管理研究院！
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="maincon" style="background: #f9f9f9;">
+				<img src="img/yz.png" alt="">
+			</div>
+			<!-- 愿景使命 -->
+			<div class="maincon">
+				<div class="title">
+					愿景使命（Vision）
+				</div>
+			</div>
+			<div class="img-group">
+				<div style="display:table;height:680px;background:#D61F2C;flex: 0.7;">
+					<div style="text-align: center;display: table-cell;vertical-align: middle;">
+						<div>
+							<i style="width:50px;height:36px;">
+								<img src="img/text-icon-white.png" alt="">
+							</i>
+							<h1 style="display: inline-block;">愿景（Vision）</h1>
+							<p style="letter-spacing: 1px;">成为中国金融业最有影响力的民间智库！</p>
+						</div>
+						<div style="margin-top:50px">
+							<i style="width:50px;height:36px;">
+								<img src="img/text-icon-white.png" alt="">
+							</i>
+							<h1 style="display: inline-block;">使命（Mission）</h1>
+							<p style="letter-spacing: 1px;">专注“好”研究，影响“好”金融！</p>
+						</div>
+					</div>
+				</div>
+				<div style="height:680px" class="yjsm">
+					<!--<img src="img/yjsm.png" alt="">-->
+				</div>
+			</div>
+			<div style="clear:both;margin-bottom:2px;"></div>
+			<!-- 服务内容 -->
+			<div class="maincon" style="background: #f9f9f9;padding-bottom: 60px;">
+			<div class="title">
+				服务内容（Service）
+			</div>
+			
+			<div class="service" style="display: flex;">
+				<div>
+				<div class="img-list">
+					<img src="img/imgList1.png" alt="">
+				</div>
+				</div>
+				<div>
+				<div class="img-list">
+					<img src="img/imgList2.png" alt="">
+				</div>
+				</div>
+				<div>
+				<div class="img-list">
+					<img src="img/imgList3.png" alt="">
+				</div>
+				</div>
+			</div>
+			</div>
+			<div style="clear:both;margin-bottom:2px;"></div>
+			<!-- 治理机制 -->
+			<div class="maincon" style="padding-bottom: 60px;">
+			<div class="title">
+				治理机制（Governance）
+			</div>
+			
+			<div style="text-align: center;">
+				<img src="img/zljz.png" alt="" >
+			</div>
+			</div>
+			<!-- 组织架构 -->
+			<div class="maincon" style="background: #f9f9f9;padding-bottom: 60px;">
+			<div class="title">
+				组织架构（Structure）
+			</div>
+			
+			<div style="text-align: center;">
+				<img src="img/zzjg.png" alt="">
+			</div>
+			</div>
+			<!-- 核心团队 -->
+			<div class="maincon" style="padding-bottom: 60px;">
+			<div class="title">
+				核心团队（Team）
+			</div>
+			<div class="team-info-group">
+				<div class="team-member">
+					<div class="member-img">
+						<img src="img/wjf.png">
+					</div>
+					<div class="member-info">
+						<ul>
+							<li><span class="member-name">巫景飞</span></li>
+							<li class="grey"><span><img src="img/ins-icon.png" /> 上海大学经济学院副教授</span></li>
+							<li class="grey"><span><img src="img/ins-icon.png" /> 浙商资产管理研究院创始院长</span></li>
+							<li class="grey"><span><img src="img/ins-icon.png" /> 上海交通大学高等金融学院企业导师</span></li>
+							<li><span>长期从事产业分析与企业战略研究，具有二十年以上管理咨询经验，曾经为包括意大利Ferretti游艇集团、意大利Savio纺机公司、中国商用飞机有限公司、浙江国贸集团、浙江物产集团、浙江东方股份有限公司、汇鸿国际股份有限公司、舟山港集团、舟山交通投资集团、昆明交通投资集团、杭州联合商业银行、江苏高科技投资集团、舟山市国资委、上海市国资委以及中组部等机构提供过咨询或培训服务。</span></li>
+							<li><span>已在《管理世界》、《中国工业经济》、《财贸经济》、《企业管理》等并已在多个刊物上进行了发表数十篇经济理论与实务文章。先后主持或参与了包括国家重点基础研究发展计划 （973项目）、国家科技支撑计划、国家社科基金、国家发改委CDM基金、国务院法制办立法研究等多项国家级、省部级研究项目。</span></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="team-info-group">
+				<div class="team-member">
+					<div class="member-img">
+						<img src="img/nzx.png">
+					</div>
+					<div class="member-info">
+						<ul>
+							<li><span class="member-name">倪中新</span></li>
+							<li class="grey"><span><img src="img/ins-icon.png" /> 金融信息研究中心主任</span></li>
+							<li class="grey"><span><img src="img/ins-icon.png" /> 浙商资产管理研究院创始院长</span></li>
+							<li class="grey"><span><img src="img/ins-icon.png" /> 香港中文大学统计系，统计学哲学博士学位</span></li>
+							<li><span>主要研究领域：数理统计、金融计量经济、数量投资分析。多次指导学生参加国际、国内数学模型竞赛，并荣获国际特等奖一项，具有丰富的数学建模经验。</span></li>
+							<li><span>入选上海市“浦江人才”计划。近年来在SSCI、SCI检索的国际期刊以及国内重要学术期刊公开发表学术论文30多篇。</span></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="team-info-group">
+				<div class="team-member">
+					<div class="member-img">
+						<img src="img/ly.png">
+					</div>
+					<div class="member-info">
+						<ul>
+							<li><span class="member-name">李勇</span></li>
+							<li class="grey"><span><img src="img/ins-icon.png" /> 教育部青年长江特聘教授</span></li>
+							<li class="grey"><span><img src="img/ins-icon.png" /> 香港中文大学取得统计学博士</span></li>
+							<li class="grey"><span><img src="img/ins-icon.png" /> 新加坡管理大学金融学博士后</span></li>
+							<li><span>中国人民大学汉青经济金融研究院金融学博士生导师、原金融系系主任，量化金融专业硕士项目项目主任、院长助理。</span></li>
+							<li><span>研究方向是贝叶斯金融计量经济学，资产配置，量化投资。入选教育部新世纪人才，北京市青年优秀人才。</span></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="team-info-group">
+				<div class="team-member">
+					<div class="member-img">
+						<img src="img/hz.png">
+					</div>
+					<div class="member-info">
+						<ul>
+							<li><span class="member-name">黄卓</span></li>
+							<li class="grey"><span><img src="img/ins-icon.png" /> 《经济学（季刊）》副主编</span></li>
+							<li class="grey"><span><img src="img/ins-icon.png" /> 北京大学数字金融研究中心副主任</span></li>
+							<li class="grey"><span><img src="img/ins-icon.png" /> 北京大学国家发展研究院副教授、博士生导师、发树学者</span></li>
+							<li><span>黄卓老师于2001年获得斯坦福大学经济学博士学位，曾获得斯坦福大学经济系“最佳博士生候选人论文奖”、曹凤岐金融发展基金“金融青年科研优秀奖”等奖励</span></li>
+							<li><span>2017年获得北京大学“中国工商银行经济学优秀学者奖”。黄卓老师的发表论文曾入选ESI全球经济学与商学领域前1%高被引论文。</span></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="team-info-group">
+				<div class="team-member">
+					<div class="member-img">
+						<img src="img/gj.png">
+					</div>
+					<div class="member-info">
+						<ul>
+							<li><span class="member-name">高健</span></li>
+							<li class="grey"><span><img src="img/ins-icon.png" /> 北京中金量化科技投资有限公司创始人、总经理</span></li>
+							<li class="grey"><span><img src="img/ins-icon.png" /> 中国跨学科金融科技智库联合创始人</span></li>
+							<li class="grey"><span><img src="img/ins-icon.png" /> 原中国国际期货有限公司资管中心副总裁兼总监</span></li>
+							<li><span>北京大学金融学研究生，中国人民大学量化投资客座教授。原中国国际期货有限公司资管中心副总裁兼总监，投资经理。10余年大型金融机构投资经验，管理资产达到二十亿以上。</span></li>
+							<li><span>丰富的量化交易及风险计量系统开发经验，主持开发过投资组合优化管理系统、外盘衍生品交易系统、衍生品风险计量系统（SPAN）、和智能套利交易系统等软件项目。擅长跨学科金融建模及通过先进的人工智能技术在复杂的市场环境下优化投资组合，控制风险，增厚收益。</span></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="team-info-group">
+				<div class="team-member">
+					<div class="member-img">
+						<img src="img/xy.png">
+					</div>
+					<div class="member-info">
+						<ul>
+							<li><span class="member-name">玄耀</span></li>
+							<li class="grey"><span><img src="img/ins-icon.png" /> 北京中金量化首席投资官</span></li>
+							<li class="grey"><span><img src="img/ins-icon.png" /> 北京对外经贸大学金融学院研究生校外导师</span></li>
+							<li class="grey"><span><img src="img/ins-icon.png" /> CCTV证券资讯频道“《A股量化策略》”唯一特邀嘉宾</span></li>
+							<li><span>CCTV证券资讯频道量身打造的黄金档栏目，中国首档量化节目“《A股量化策略》”，运行至今共200多期，作为每期的唯一特邀嘉宾，负责每期内容的制作和讲解。</span></li>
+							<li><span>十年华尔街专业量化研究经验，曾在美国最成功的量化基金管理公司Dimensional Fund Advisors（DFA）从事交易算法开发及金融产品设计。在任职期间参与全球股票基金产品策略研发，核心交易算法开发，涉及到的产品100余只，对应规模4000亿美元。被美国机构投资者组织（Institutional Investor) 授予2010年度最佳量化投资经理奖。在玄耀负责交易算法的5年期间（2008-2013），DFA旗下基金有80%超过同类型的基准指数。</span></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="team-info-group">
+				<div class="team-member">
+					<div class="member-img">
+						<img src="img/lp.png">
+					</div>
+					<div class="member-info">
+						<ul>
+							<li><span class="member-name">李平</span></li>
+							<li class="grey"><span><img src="img/ins-icon.png" /> 北京航空航天大学经管学院金融系教授、博导，北京航空航天大学经济与商学研究院院长助理</span></li>
+							<li class="grey"><span><img src="img/ins-icon.png" /> 中国科学院数学与系统科学研究院概率统计博士，中国科学院数学与系统科学研究院金融管理博士后</span></li>
+							<li class="grey"><span><img src="img/ins-icon.png" /> 民建北京市委金融委员会副主任，中航重机独立董事，中国金融系统工程专委会副秘书长，中国金融计量专委会副秘书长</span></li>
+							<li><span>先后在普林斯顿大学运筹与金融工程系、美国哥伦比亚大学工业工程与运筹系及统计系、美国南卡罗来纳大学商学院金融系、香港中文大学工业工程与运筹系、奥地利维也纳技术大学金融数学与保险系、德国洪堡大学随机研究所等机构做访问研究。曾于2015年8月至2016年8月间挂职首创集团金融管理部副总经理， 2010年12月至2011年6月间挂职北京市海淀区房管局局长助理。</span></li>
+							<li><span>先后主持了四项国家自然科学基金项目、参与了国家973项目和国家自然科学基金重点项目等；在国内外知名学术期刊如European Financial Management、Quantitative Finance、Finance Research Letters、Annals of Economics and Finance、Optimization、Theoretical Computer Science、《管理科学学报》、《系统工程理论与实践》等发表论文50余篇。协助成思危先生出版《虚拟经济概览》、《人民币国际化》、《The Chinese Stock Market》等3部专著；曾任新华社、中债登记结算公司、北京市金融局等单位的项目评审专家。</span></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="team-info-group">
+				<div class="team-member">
+					<div class="member-img">
+						<img src="img/phf.png">
+					</div>
+					<div class="member-info">
+						<ul>
+							<li><span class="member-name">潘慧峰</span></li>
+							<li class="grey"><span><img src="img/ins-icon.png" /> 况客科技研究顾问</span></li>
+							<li class="grey"><span><img src="img/ins-icon.png" /> 对外经济贸易大学金融学院教授，博士生导师</span></li>
+							<li class="grey"><span><img src="img/ins-icon.png" /> 量化专硕项目主任，智慧金融科技研究中心主任</span></li>
+							<li><span>主要研究领域：实证金融、风险管理、FoF投资，主持并参与了多项国家级和省部级科研项目，在《Annals of Operation Research》、《经济研究》、《金融研究》、《统计研究》、《中国软科学》、《国际金融研究》等期刊发表论文40余篇。</span></li>
+							<li><span>2013年开始主讲《股票量化策略》，与业界进行广泛的合作，长期探索产学研一体化的人才培养模式。</span></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="team-info-group">
+				<div class="team-member">
+					<div class="member-img">
+						<img src="img/wsh.png">
+					</div>
+					<div class="member-info">
+						<ul>
+							<li><span class="member-name">王胜华</span></li>
+							<li class="grey"><span><img src="img/ins-icon.png" /> 汇鸿汇升投资总经理</span></li>
+							<li class="grey"><span><img src="img/ins-icon.png" /> 上市公司汇鸿国际集团董事会秘书及投资主管</span></li>
+							<li><span>从业10年来主要负责上市公司的投资管理工作，具有开阔的思维视野，敏锐果断的研判能力和风险意识。</span></li>
+							<li><span>在任职董秘期间，参与完成江苏省国企改革第一单——汇鸿国际集团的整体上市重组工作。同时，领导汇升在量化投资及资产配置方面积累了丰富的经验。</span></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			</div>
+			<!-- 底部 -->
+			<div class="footer-bottom" ></div>
+		<!-- </div> -->
+	</body>
+	</html>
