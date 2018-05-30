@@ -11,32 +11,49 @@
 	<style type="text/css"">
 	/*html,body{width:100%;height:100%;margin:0;padding:0;overflow-x:hidden;}*/ 
 	.header1 {background:url('img/cademo_title_background.png') center center no-repeat;z-index:-1; margin-top: 75px;}
-	.img-group{width:auto;display:flex;}
+	.img-group{width:auto; display: -webkit-box;  
+    display: -moz-box;     
+    display: -ms-flexbox;  
+    display: -webkit-flex; 
+    display: flex;        }
 	.img-group>div:first-child{
-		flex:1;
+		-webkit-box-flex: 1    
+	    -moz-box-flex: 1;               
+	    -webkit-flex: 1;      
+	    -ms-flex: 1           
+	    flex: 1;       
 	    background-image: url("img/yq.png");
 	    background-size: cover;
 	    background-repeat: no-repeat;
 	} 
 	.yjsm{
+		-webkit-box-flex: 1    
+	    -moz-box-flex: 1;               
+	    -webkit-flex: 1;      
+	    -ms-flex: 1           
+	    flex: 1;     
 	    background-image: url("img/yjsm.png");
 	    background-size: cover;
 	    background-repeat: no-repeat;
 	} 
-	.img-group > div {flex:1;margin:0px;padding:0px;}
-	.title-label{font-family: PingFangSC-Regular;font-size: 30px;color: #484848;letter-spacing: 3px;text-align: justify;}
+	.img-group > div {-webkit-box-flex: 1    
+	    -moz-box-flex: 1;               
+	    -webkit-flex: 1;      
+	    -ms-flex: 1 ;          
+	    margin:0px;padding:0px;}
+	.title-label{font-size: 30px;color: #484848;letter-spacing: 3px;text-align: justify;}
 	.text-center{align-text:center;} .text-left{align-text:left;} .text-right{align-text:right;}
-	.bg-red{background-color:#D61F2C } .text-main{font-family:'Helvetica';font-size: 18px;color: #FFFFFF;text-align: justify;line-height: 28px;padding:20px;} .text-main > div{display: table-cell;vertical-align: middle;} .white{color:#ffffff;}
-	.i-text{width:25px;height:18px;background-image:url(img/text-icon-white.png);float:left;margin-top:5px;margin-right:5px;vertical-align:text-top;vertical-align:middle;} p {opacity: 0.8;font-family: PingFangSC-Regular;font-size: 20px;color: #FFFFFF;line-height: 24px;margin-top:6px}
-	 h1 {color:#FFFFFF ;font-family: 'Helvetica-Bold';font-size:30px;letter-spacing:1.8px;line-height:36px;margin-top:25px;}
+	.bg-red{background-color:#D61F2C } .text-main{font-size: 18px;color: #FFFFFF;text-align: justify;line-height: 28px;padding:20px;} .text-main > div{display: table-cell;vertical-align: middle;} .white{color:#ffffff;}
+	.i-text{width:25px;height:18px;background-image:url(img/text-icon-white.png);float:left;margin-top:5px;margin-right:5px;vertical-align:text-top;vertical-align:middle;} p {opacity: 0.8;font-size: 20px;color: #FFFFFF;line-height: 24px;margin-top:6px}
+	 h1 {color:#FFFFFF ;font-size:30px;letter-spacing:1.8px;line-height:36px;margin-top:25px;}
 	.img-list {z-index:999;border-radius:4px;} .img-list:hover{box-shadow: 0 0 3px #000}
 	.team-info-group{position:relative}
 	.team-member{border-bottom: 1px solid #e5e5e9;margin:0 auto;min-height:260px;margin-top:50px;} .team-member>div{display:inline-block;vertical-align:top;}.member-img{width:180px;height:240px;} .member-info{width: calc(100% - 188px);}.clearfix {min-height: 1px;}  .member-info > ul{line-height:30px;}
 	.member-info span{font-size: 14px;color: #484848;text-align: justify;line-height: 22px;}
 	.member-info > ul > li{margin: 5px 0 5px 25px;letter-spacing: 1px;}
-	.member-info > ul > li.grey{opacity: 0.8;font-family: Helvetica;font-size: 16px;color: #484848;text-align: justify;line-height: 16px;margin:0 25px;}
+	.member-info > ul > li.grey{opacity: 0.8;font-size: 16px;color: #484848;text-align: justify;line-height: 16px;margin:0 25px;}
 	.member-info > ul > li.grey span{height:25px;line-height: 25px;letter-spacing: 1px;}
-	.member-info .member-name{font-family: MicrosoftYaHei-Bold;font-size: 24px;color: #484848;height: 30px;letter-spacing: 1px;} 
+	.member-info .member-name{font-size: 24px;color: #484848;height: 30px;letter-spacing: 1px;} 
 	.popular_package_row {border-bottom: 1px dashed #ccc;margin-bottom: 10px;padding-bottom: 10px;}
 	.text-group{margin-top:0;} .text-group > span {font-size:18px;line-height:28px;margin: 10px 100px 10px 40px;}
 	.member-info > ul > li > span {white-space : normal;overflow-y:hidden;width:100%;}
@@ -146,7 +163,7 @@
 				</div>
 			</div>
 			<div class="img-group">
-				<div style="display:table;height:680px;background:#D61F2C;flex: 0.7;">
+				<div style="display:table;height:680px;background:#D61F2C; -webkit-box-flex: 0.7 ; -moz-box-flex: 0.7; flex: 0.7; -webkit-flex: 0.7;-ms-flex: 0.7  ">
 					<div style="text-align: center;display: table-cell;vertical-align: middle;">
 						<div>
 							<i style="width:50px;height:36px;">

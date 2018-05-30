@@ -251,8 +251,17 @@ $(function(){
 	    		if(mutualNum==0){
 	    			pData(1);
 	    		}else{
-	    			$(".fofeasy #num1").numberAnimate({num:mutualNum, speed:1000});
-	    			$(".fofeasy #num2").numberAnimate({num:hedgeNum, speed:1000});
+	    			console.log($(".fofeasy #num1").parents('.pub1').css("display"))
+	    			if($(".fofeasy #num1").parents('.pub1').css("display")=="none"){
+	    				$(".fofeasy #num1").html("<div>"+mutualNum+"</div>")	    				
+	    			}else{
+	    				$(".fofeasy #num1").numberAnimate({num:mutualNum, speed:1000});
+	    			}
+	    			if($(".fofeasy #num2").parents('.pub1').css("display")=="none"){
+	    				$(".fofeasy #num2").html("<div>"+hedgeNum+"</div>")	    				
+	    			}else{
+	    				$(".fofeasy #num2").numberAnimate({num:hedgeNum, speed:1000});
+	    			}
 	    		}
 	    		
 	    	},2000)	    	
