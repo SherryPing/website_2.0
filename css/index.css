@@ -1577,6 +1577,11 @@ to {-webkit-transform: rotate(360deg);transform-origin:50% 50%;  }
 	margin-left: -7px;
 	letter-spacing: 1px;
 }
+.about .about-con3 .news .right-con .title:hover a {
+	text-decoration: underline;
+	color: #4499D0;
+	cursor: pointer;
+}
 .about .about-con3 .news .right-con .con {
 	font-size: 14px;
 	color: rgba(72,72,72,0.8);
